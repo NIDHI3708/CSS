@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #nav{
+            background-color: lightsalmon;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+        }
+        .box{
+            text-decoration: none;
+        }
+        #image{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 3px solid black;
+            height:150px;
+        }
+        .boxes{
+            height: 100px;
+            width: 100px;
+            background-color: lightblue;
+            border: 3px solid darkblue;
+            flex-shrink:0;
+           }
+           #box3{
+            flex-grow: 1;
+            flex-shrink: 1;
+           }
+        #media_box{
+            height: 50px;
+            width: 50px;
+            background-color: rgb(79, 163, 79);
+            border: 3px solid darkgreen;
+        }
+
+        @media screen and (min-width:401px)
+        {#media_box{
+            background-color: lightskyblue;
+            border: 3px solid darkblue;
+            }}
+
+        @media screen and (min-width: 301px) and (max-width: 400px)
+        {#media_box{
+            background-color: lightcoral;
+            border: 3px solid darkred;
+                
+            }}
+
+
+        
+    </style>
+</head>
+<body>
+    <header>
+    <nav id="nav">
+        <a class=box href="#">HTML</a>
+        <a class=box href="#">JAVA</a>
+        <a class=box href="#">CSS</a>
+        <a class=box href="#">C++</a>
+    </nav>
+    </header>
+    <main>
+        <div id="image">
+        <img src="../assets/car.avif" style="height: 100px;"></img>
+        </div><hr>
+        <div id="container" style="border: 3px solid black; display: flex; justify-content: space-around;">
+        <div id="box1" class="boxes">Box1</div>
+        <div id="box2" class="boxes">Box2</div>
+        <div id="box3" class="boxes">Box3</div>
+        </div><hr>
+        <div id="media_box">Media Box</div>
+    </main>
+</body>
+</html>
