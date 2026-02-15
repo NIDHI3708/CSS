@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn{
+            width:100px;
+            height:60px;
+            
+            background-color: blueviolet;
+            box-sizing: border-box;
+            
+            position: relative;
+            
+}
+
+        
+        
+        .car{
+            width: 30px;
+            height: 27px;
+            background-color: white;
+            
+        }
+        #car1{
+            
+            
+            position: relative;
+            bottom: 19px;
+            right: 16px;
+            border-radius:0px 0px 5px 0px;
+            
+            
+        }
+        #car2{
+           
+            position: relative;
+            bottom:46px;
+            left:70px;
+            border-radius:0px 0px 0px 5px;
+            
+            
+        }
+
+         .door{
+            width: 25px;
+            height: 55px;
+            background-color: blueviolet;
+            
+            box-sizing: border-box;
+        }
+
+        #door1{
+            border: 1px solid black;
+            position: relative;
+            bottom: 70px;
+            left: 16px;
+            border-radius:5px 0px 0px 0px
+            
+            
+        }
+
+        #door2{
+            border: 1px solid black;
+            position: relative;
+            bottom: 125px;
+            left: 42px;
+            border-radius:0px 5px 0px 0px;
+            
+            
+        }
+
+        .window{
+            width: 18px;
+            height: 20px;
+            background-color: lightsteelblue;
+        }
+
+        #window1{
+            position: relative;
+            bottom: 177px;
+            left: 19px;
+            border-radius: 5px 0px 0px 0px;
+        }
+        #window2{
+            position: relative;
+            bottom: 197px;
+            left: 46px;
+            border-radius: 0px 5px 0px 0px;
+        }
+
+        .light{
+            width: 10px;
+            height: 10px;
+            background-color: yellow;
+            
+            position: relative;
+        }
+        #light1{
+            bottom: 194px;
+            right:-2px;
+        }
+
+        #light2{
+            bottom: 204px;
+            left: 88px;
+        }
+
+        #circle1, #circle2 {
+            width: 20px;
+            height:20px;
+            background-color: white;
+            
+            border-radius: 50%
+        }
+        #circle1{
+            position: relative;
+            bottom: 195px;
+            left: 10px;
+        }
+
+        #circle2{
+            position: relative;
+            bottom: 215px;
+            left: 50px;
+        }
+
+        #circle3, #circle4{
+            width: 18px;
+            height:18px;
+            background-color: black;
+            border:2px dashed white;
+            
+            border-radius: 50%;
+        }
+        #circle3{
+            position: relative;
+            bottom: 235px;
+            left: 10px;
+        }
+
+        #circle4{
+            position: relative;
+            bottom: 258px;
+            left: 50px;
+        }
+
+        @keyframes move{
+            from{transform: translateX(0px)};
+            to{transform: translateX(400px)};
+            
+            
+        }
+        @keyframes rotatee {
+            from{transform: rotateZ(0deg);}
+            to{transform: rotateZ(1000deg);}
+        }
+        #container{
+            border:2px solid black;
+            height:120px;
+            width:200px;
+            display: flex;
+            justify-items: center;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        #container.move {
+            animation-name: move;
+            animation-timing-function: linear;
+            animation-duration: 10s;
+            animation-fill-mode: forwards;
+            animation-direction:normal;
+            animation-iteration-count: 1;
+        }
+        #container.move .circle{
+            animation-name: rotatee;
+            animation-timing-function: linear;
+            animation-duration: 10s;
+            animation-direction: normal;
+        }
+
+      
+
+    </style>
+    </head>
+    <body>
+        <div id="container"><div id="btn">hello
+        <div id="car1" class="car"></div>
+        <div id="car2" class="car"></div>
+        <div id="door1" class="door"></div>
+        <div id="door2" class="door"></div>
+        <div id="window1" class="window"></div>
+        <div id="window2" class="window"></div>
+        <div id="light1" class="light"></div>
+        <div id="light2" class="light"></div>
+        <div id="circle1" class="circle"></div>
+        <div id="circle2" class="circle"></div>
+        <div id="circle3" class="circle"></div>
+        <div id="circle4" class="circle"></div>
+        </div></div>
+        
+        <script>
+const container = document.getElementById("btn");
+
+container.addEventListener("click", function() {
+    container.classList.add("move");
+});
+</script>
+
+
+    </body>
+</html>
